@@ -11,6 +11,12 @@ crypto.pbkdf2Sync("password","salt", 50000000, 50, "sha512");
 console.log("First Key is Generated")
 
 
+setTimeout(()=> {
+  console.log("Call Me Right Now !!!! ");
+},0) // it will only be called once call stack of main thread is empty
+
+
+
 // Async function
 //Runs in background (libuv thread pool)
 crypto.pbkdf2("Passowrd", "salt", 5000000,50, "sha512", (error, key) => {
