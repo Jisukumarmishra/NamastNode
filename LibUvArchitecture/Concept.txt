@@ -1,0 +1,15 @@
+LibUv Have  MAin 3 Component
+1 EventLoop
+2 CallBack Queue/ Priority Queue
+3 Thread Pool
+
+# Event Loop
+* In The Order of Execution Never Think About The Position Of The Code Its All About Order Of The Internal Working And Requirements
+ 
+4 Phases Of Event Loop:= Timer(setTimeOut/SetInterval) --> pole(I/O CallBack/incoming Coonection/File read/Api Call, Major Thing) --> check(setImmediate) -->close(Socket.on"Close")
+Before Starting the First pahge Two Process Happenas And This Happenf Before Every Phgag Runing
+
+--Process.nextTick
+--Promise CallBack
+   
+** Main Work Of Event Loop To Schedule The CallBacks OF The Code
