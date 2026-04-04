@@ -1,0 +1,5 @@
+* Intrepreted Languages:= Line By Line Code Execution
+* Compiled Languages:= First Compiled Means High lavel Code -> Machine code
+
+* JavaScript Language:= Uses Both(v8) intrpreted And Complilation approach (Jit compilation (just in time));
+* ignis intrepretor + turbofan compiler (T.F:=Optimazation And Deoptimization)
