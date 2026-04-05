@@ -12,4 +12,9 @@ Before Starting the First pahge Two Process Happenas And This Happenf Before Eve
 --Process.nextTick
 --Promise CallBack
    
-** Main Work Of Event Loop To Schedule The CallBacks OF The Code
+** Main Work Of Event Loop To Schedule The CallBacks OF The Code as well as {
+  -- Check The Priority Queue Is there any Process to get in the gec
+  -- Check The Call Stack To Empty or Not
+}
+
+*** EventLoop Wait At The P00l Phase if its have Nothing To Do 
