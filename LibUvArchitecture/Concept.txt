@@ -24,7 +24,14 @@ Before Starting the First pahge Two Process Happenas And This Happenf Before Eve
 
 
 # Thread Pool #
+
 -- there are some function to execute libuv uses the thread poll like fs.function, dns.lookup,user specified input, crpto , file reading(becase file  reading jiase work main
 thread me nhi ho sakte hai nhi to vo block ho sakta hai show we use thread pool show that our main thread is not blocked)
 
 -- bedefault threadpool (uv thread pool) size = 4;
+
+
+Q1 is node.js single Threaded or Multi threaded:=
+
+ans:= its depend upon given code if the given code consiist only the sync code then its perform like a single threaded but its consist
+of async operation then its uses thread pool(libuv) multithreaded performance.
