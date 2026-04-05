@@ -1,9 +1,10 @@
 LibUv Have  MAin 3 Component
 1 EventLoop
-2 CallBack Queue/ Priority Queue
+2 CallBack Queue/ Priority Queue:= processes are waiting here to complete the gec and then schedule according to thieir order
 3 Thread Pool
 
-# Event Loop
+                  # Event Loop #
+
 * In The Order of Execution Never Think About The Position Of The Code Its All About Order Of The Internal Working And Requirements
  
 4 Phases Of Event Loop:= Timer(setTimeOut/SetInterval) --> pole(I/O CallBack/incoming Coonection/File read/Api Call, Major Thing) --> check(setImmediate) -->close(Socket.on"Close")
@@ -18,3 +19,12 @@ Before Starting the First pahge Two Process Happenas And This Happenf Before Eve
 }
 
 *** EventLoop Wait At The P00l Phase if its have Nothing To Do 
+
+* Tick = 1 Full Cycle Of Event Loop Is Known As 1 Tick
+
+
+# Thread Pool #
+-- there are some function to execute libuv uses the thread poll like fs.function, dns.lookup,user specified input, crpto , file reading(becase file  reading jiase work main
+thread me nhi ho sakte hai nhi to vo block ho sakta hai show we use thread pool show that our main thread is not blocked)
+
+-- bedefault threadpool (uv thread pool) size = 4;
