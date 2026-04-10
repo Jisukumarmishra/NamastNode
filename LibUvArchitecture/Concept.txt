@@ -3,7 +3,7 @@ LibUv Have  MAin 3 Component
 2 CallBack Queue/ Priority Queue:= processes are waiting here to complete the gec and then schedule according to thieir order
 3 Thread Pool
 
-                  # Event Loop #
+ # Event Loop #
 
 * In The Order of Execution Never Think About The Position Of The Code Its All About Order Of The Internal Working And Requirements
  
