@@ -1,0 +1,15 @@
+Database:= Structure And Organized Collection Of The Data
+-- it like a place to organized collection of the data
+
+DBMS:= way to interact with the database 
+-- it is the software that interact with the application or user and database both
+
+Types Of DataBase:=
+
+--RDB
+--NRDB
+--in Memory DB:-Redis(similar like RAM(FASTER USING CACHING TO FAST ACCESES THE DATA) And ROM) To Fast acces teh 
+db throgh the api call
+--cockroach db
+--Amazon RDS
+ etc..
