@@ -1,10 +1,15 @@
+require("dotenv").config();
 const {MongoClient} = require("mongodb");
 
-const url = "mongodb+srv://namastedev:iCoki8fFsJdHJvAH@namastenode.cfamcna.mongodb.net/"
+const url = process.env.MONGODB_URI;
+
+if (!url) {
+  throw new Error("Missing MONGODB_URI. Add it to your .env file.");
+}
 
 const client = new MongoClient(url);
 
-const dbName = "Version1";
+const dbName = process.env.MONGODB_DB_NAME || "Version1";
 
 async function main () {
   // use connect menthod to connect to the server
@@ -12,11 +17,28 @@ async function main () {
 
   console.log('Connected successfully to server');
   const db = client.db(dbName);
-  const collection = db.collection('documents');
+  const collection = db.collection('Users');
 
-  // the following code examples can be pasted here...
+  const data = {
+    firstName : "Billionare",
+    secondName : "Millionare",
+    city : "Greater Noida",
+    PhoneNumber : "2479820938"
+  }
 
-  return 'done.';
+  // insert a document
+  const insertResult = await collection.insertMany([data]);
+  console.log('Inserted documents =>', insertResult);
+
+
+  // Read
+  const findResult = await collection.find({}).toArray();
+  console.log('Found documents =>', findResult); 
+
+  const countResult = await collection.countDocuments({});
+  console.log("Count Of The Document in The User Collections =>", countResult);
+
+  return 'done';
 
 }
 
